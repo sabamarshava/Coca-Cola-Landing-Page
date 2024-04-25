@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161616;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e51e2a;
+    clip-path: circle(70% at right -20%);
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+.navigation li{
+    list-style: none;
+}
+
+.navigation li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    align-items: center;
+}
+
+.content .textbox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textbox h2 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.content .textbox p {
+    color: #fff;
+}
+
+.content .textbox a {
+    display: inline-block;
+    color: white;
+    background-color: #e51e2a;
+    margin-top: 20px;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.sci {
+    position: absolute;
+    bottom: -30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    margin-left: 15px;
+    background: #222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.sci li a:hover {
+    background-color: #e51e2a;
+    transform: translateY(-10px);
+}
+
+.sci li a img {
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+/* swiper css */
+.swiper {
+    width: 100%;
+    padding: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    height: 460px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.content .imgBox {
+    width: 500px;
+/*     display: flex; */
+    justify-content: flex-end;
+}
+
+.content .imgBox img {
+    max-width: 150px;
+}
+
+.swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;   
+}
+px
+.swiper-slide .swiper-slide-visible .swiper-slide-activeswiper-slide .swiper-slide-visible .swiper-slide-active .swiper-slide .swiper-slide-next
+{
+    background-image: none;
+/*     transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(0); */
+}
+
+
+@media (max-width: 991px) {
+
+    header 
+    {
+        padding: 40px;
+    }
+    section 
+    {
+        padding: 150px 40px;
+    }
+    .content
+    {
+        flex-direction: column;
+    }
+    .content .textbox
+    {
+        max-width: 100%;
+    }
+    .content .imgBox,
+    .content .textbox
+    {
+        max-width: 100%;
+    }
+    .swiper-slide
+    {
+        height: 300px;
+    }
+    header .navigation
+    {
+        display: none;
+    }
+    
+    header .navigation.active
+    {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: red;
+        z-index: 100;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        gap: 20px;
+    }
+    .toggle
+    {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        z-index: 1000000;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        background-image: url(./photo/menu.png);
+    }
+    .toggle.active {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(./photo/close.png);
+        background-size: 25px;
+        position: fixed;
+        right: 40px;
+    }
+    .sci
+    {
+        bottom: -14%;
+        left: 0;
+    }
+    .content
+    {
+        margin-left: 0px;
+    }
+}
+
+
